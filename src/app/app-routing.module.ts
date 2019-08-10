@@ -6,7 +6,7 @@ import { ProvidersComponent } from './components/providers/providers.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'provides', component:ProvidersComponent}
+  { path: 'providers', component:ProvidersComponent}
 ];
 
 @NgModule({
