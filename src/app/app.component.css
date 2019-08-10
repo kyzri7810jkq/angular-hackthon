@@ -1,7 +1,17 @@
+body{
+  background: red !important;
+} 
 .example-icon {
-    padding: 0 14px;
-  }
-  
-  .example-spacer {
-    flex: 1 1 auto;
-  }
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar-row{
+  background:indigo;
+  color: #fff;
+}
+.mat-toolbar-row a{
+  color: #fff;
+}

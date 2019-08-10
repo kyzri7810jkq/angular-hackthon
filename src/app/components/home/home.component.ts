@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/services/jobs.service';
+import { JobsInterface } from 'src/app/models/Jobs';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  jobs: Array<JobsInterface>;
+
+  constructor(private service: JobsService) { }
 
   ngOnInit() {
+    this.service.getJobs().subscribe(data => {
+      this.jobs = Object.values(data)
+      console.log(this.jobs)
+    });
+  }
+
+  SearchFrm() {
+    
   }
 
 }
