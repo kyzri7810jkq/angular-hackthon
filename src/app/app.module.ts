@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { AppMaterialsModule } from './app-materials';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceDetailsComponent } from './components/service-details/service-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routeComponents,
+    ServiceDetailsComponent,
   ],
   imports: [
     BrowserModule,

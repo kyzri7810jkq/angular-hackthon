@@ -8,11 +8,17 @@ import { JobsInterface } from '../models/Jobs';
 })
 export class JobsService {
 
-  URL = 'https://ngjuan-edc96.firebaseio.com/jobs.json'
+  URL = 'https://ngjuan-edc96.firebaseio.com/jobs'
+  details = 'https://ngjuan-edc96.firebaseio.com/jobs/-LhU6WoEIEY4oViYaoH7.json'
 
   constructor(private http: HttpClient) { }
 
   getJobs(): Observable<JobsInterface[]>{
-    return this.http.get <JobsInterface[]>(this.URL)
+    return this.http.get <JobsInterface[]>(this.URL + '.json')
+  }
+
+  getJobDetail(id: any): Observable<JobsInterface>{
+    let url = this.URL + '/' + id + '.json';
+    return this.http.get <JobsInterface>(url);
   }
 }

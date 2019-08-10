@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Service Details</h1>
+
+    <table class="table" *ngIf="show; else elseBlock">
+        <tr>
+            <td>ID</td><td>{{ details.id }}</td>
+        </tr>
+        <tr>
+            <td>title</td><td>{{ details.title }}</td>
+        </tr>
+        <tr>
+            <td>address</td><td>{{ details.address }}</td>
+        </tr>
+        <tr>
+            <td>category</td><td>{{ details.category }}</td>
+        </tr>
+        <tr>
+            <td>description</td><td>{{ details.description }}</td>
+        </tr>
+        <tr>
+            <td>Price</td><td>{{ details.price }}</td>
+        </tr>
+        <tr>
+            <td>Image</td><td><img src="{{ details.image }}" width="300px"/></td>
+        </tr>
+    </table>
+
+    <ng-template #elseBlock>Loading...</ng-template>
+</div>
