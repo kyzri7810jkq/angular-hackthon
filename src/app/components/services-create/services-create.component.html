@@ -1,0 +1,29 @@
+<br>
+<div class="container">
+    <h3>Create Service</h3>
+    <form class="example-form" [formGroup]="serviceFrm" (ngSubmit)="submitService($event)">
+        <div class="example-container">
+            <mat-form-field>
+                <input matInput placeholder="Service Title" formControlName="title">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Image URL"  formControlName="image">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="category"  formControlName="category">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Price"  formControlName="price">
+            </mat-form-field>
+            
+            <mat-form-field>
+                    <input matInput placeholder="Price"  formControlName="address">
+                </mat-form-field>
+                
+            <mat-form-field>
+                <textarea matInput placeholder="Describe your service"  formControlName="description"></textarea>
+            </mat-form-field>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
